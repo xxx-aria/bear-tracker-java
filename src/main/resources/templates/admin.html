@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Админка</title>
+</head>
+<body>
+
+<h1>Изменить баланс 🧸</h1>
+
+<form action="/admin/update-balance" method="post">
+    <input type="number" name="amount" th:value="${balance}">
+    <button type="submit">Сохранить</button>
+</form>
+
+</body>
+</html>

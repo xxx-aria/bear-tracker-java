@@ -1,0 +1,64 @@
+.nav {
+    display: flex;
+    flex-direction: column;
+    gap: .7rem;
+    align-items: center;
+    justify-content: center;
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.balance-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: white;
+    border-radius: 1.7rem;
+    padding: 2rem 8rem;
+    width: 100%;
+    
+    text-align: center;
+    box-shadow: 0 1rem 2.2rem rgba(117, 43, 62, 0.1);
+
+    transition: 0.3s ease-in-out;
+}
+.balance-card:hover {
+    cursor: pointer;
+    box-shadow: 0 1rem 2.2rem rgba(117, 43, 62, 0.2);
+}
+.balance-number {
+    margin-left: 2rem;
+    font-size: 7rem;
+    font-weight: 500;
+    color: #af7e88;
+}
+@media screen and (max-width: 576px) {
+    .balance-card {
+        padding: 0rem 8rem;
+    }
+    .balance-number {
+        font-size: 4.8rem;
+    }
+}
+.shop-title {
+    background: #af7e88;
+    border-radius: .3rem;
+    width: 100%;
+    padding: .5rem 0;
+
+    color: white;
+    font-size: 1.5rem;
+    
+    text-align: center;
+    box-shadow: 0 1rem 2.2rem rgba(117, 43, 62, 0.1);
+
+    transition: 0.3s ease-in-out;
+}
+.shop-title:hover {
+    cursor: pointer;
+    box-shadow: 0 1rem 2.2rem rgba(117, 43, 62, 0.2);
+}
+

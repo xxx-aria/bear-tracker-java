@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сделал? Магазин</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+    <link rel="icon" type="image/png" th:href="@{/img/icon-bear.png}">
+    <link rel="stylesheet" th:href="@{/css/general.css}">
+    <link rel="stylesheet" th:href="@{/css/shop.css}">
+</head>
+
+<body>
+
+<div class="nav">
+    <div class="back-title">
+        <a th:href="@{/}">НА ГЛАВНУЮ СТРАНИЦУ</a>
+    </div>
+    <div class="shop-card">
+        <div class="balance-number">
+            Твой баланс:
+            <span class="balance" th:text="${balance}">101</span>
+            <img class="bear" th:src="@{/img/bear.png}">
+        </div>
+
+        <div class="items">
+            <table class="custom-table">
+                <tr th:each="item : ${items}">
+                    <td th:text="${item.title}">
+                        Название товара
+                    </td>
+
+                    <td>
+                        <span th:text="${item.price}">10</span>
+                        <img class="bear" th:src="@{/img/bear.png}">
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
